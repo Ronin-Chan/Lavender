@@ -1,6 +1,7 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Check, Star } from "lucide-react";
 import Phone from "@/components/Phone";
+import { CommentMarquee } from "@/components/CommentMarquee"
 
 export default function Home() {
   return (
@@ -21,7 +22,8 @@ export default function Home() {
               <p className='mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap'>
                 Capture your favorite memories with your own,{' '}
                 <span className='font-semibold'>one-of-one</span> phone case.
-                CaseCobra allows you to protect your memories, not just your
+                {' '}
+                <span className="text-purple-500">Lavender</span> allows you to protect your memories, not just your
                 phone case.
               </p>
 
@@ -32,7 +34,7 @@ export default function Home() {
                     High-quality, durable material
                   </li>
                   <li className='flex gap-1.5 items-center text-left'>
-                    <Check className='h-5 w-5 shrink-0 text-purple-400' />5 year
+                    <Check className='h-5 w-5 shrink-0 text-purple-400' />2 year
                     print guarantee
                   </li>
                   <li className='flex gap-1.5 items-center text-left'>
@@ -81,7 +83,7 @@ export default function Home() {
                   </div>
 
                   <p>
-                    <span className='font-semibold'>1.250</span> happy customers
+                    <span className='font-semibold'>1000+</span> happy customers
                   </p>
                 </div>
               </div>
@@ -102,6 +104,10 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthWrapper>
+      </section>
+
+      <section>
+        <CommentMarquee />
       </section>
     </div>
   );
