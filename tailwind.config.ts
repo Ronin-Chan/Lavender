@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -59,28 +59,33 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        "fade-in": {
+          from: {
+            opacity: '0',
+          },
+          to: {
+            opacity: '1',
+          },
         },
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },
         },
-        "marquee-vertical": {
-          from: { transform: "translateY(0)" },
-          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        myMarquee: {
+          '100%': {
+            transform: 'translateY(-50%)',
+          },
+        },
+        flashing: {
+          '0%, 100%': { opacity: '0.2' },
+          '20%': { opacity: "1" },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
         marquee: "marquee var(--duration) linear infinite",
-        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        myMarquee: 'myMarquee var(--myMarquee-duration) linear infinite',
+        "fade-in": "fade-in 0.5s linear forwards",
+        falshing: "flashing 1.5s infinite linear",
       },
     },
   },

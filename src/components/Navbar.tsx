@@ -2,10 +2,13 @@ import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
-const Navbar = () => {
-  const user = false;
-  const isAdmin = false;
+const Navbar = async () => {
+  const { getUser } = getKindeServerSession()
+  const user = await getUser()
+
+  const isAdmin = user?.email === process.env.ADMIN_EMAIL
 
   return (
     <nav className="sticky top-0 inset-x-0 h-14 w-full z-[100] bg-white/75 border-b border-purple-100 backdrop-blur-lg transition-all">
