@@ -39,7 +39,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@joshtriedcoding',
+      creator: '@ronnychen',
     },
     icons,
     metadataBase: new URL("https://lavender-eight.vercel.app/")
