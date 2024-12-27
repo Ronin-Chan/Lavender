@@ -31,7 +31,7 @@ const Steps = () => {
         const isCompleted = STEPS.slice(i + 1).some((step) =>
           pathname.endsWith(step.url)
         )
-        const imgPath = `/snake-${i + 1}.png`
+        const imgPath = `/flower${i + 1}.png`
 
         return (
           <li key={step.name} className='relative overflow-hidden lg:flex-1'>
@@ -50,7 +50,7 @@ const Steps = () => {
               <span
                 className={cn(
                   i !== 0 ? 'lg:pl-9' : '',
-                  'flex items-center px-6 py-4 text-sm font-medium'
+                  'flex items-center px-6 py-4 text-sm font-medium gap-4'
                 )}>
                 <span className='flex-shrink-0'>
                   <img
@@ -65,7 +65,7 @@ const Steps = () => {
                   />
                 </span>
 
-                <span className='ml-4 h-full mt-0.5 flex min-w-0 flex-col justify-center'>
+                <span className='h-full mt-0.5 flex min-w-0 flex-col justify-center'>
                   <span
                     className={cn('text-sm font-semibold text-zinc-700', {
                       'text-primary': isCompleted,
